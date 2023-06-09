@@ -6,6 +6,6 @@ We are using Python Flask, HTML, CSS, and MariaDB for this project.
 You can install the requirements needed for running the web application.
 
 Member :
-Khansa Intani
-Halimatul Hasanah
-Gita Wulandari
+Khansa Intani | 
+Halimatul Hasanah | 
+Galuh Ratna Widyasari
