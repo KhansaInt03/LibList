@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList Result {% endblock %}</title>
+    </head>
+
+
+    {% block content %}
+    <div class="content">
+        <p class="p2">Here is the result of your search!</p>
+        <div class="values1">
+            <table class="tabel">
+                <tbody class="tabelhasilcari">
+                    <tr>
+                        <th>ID Buku</th>
+                        <th>Judul Buku</th>
+                        <th>Rak Buku</th>
+                        <th>Stok Buku</th>
+                        <th>Buku Tersedia</th>
+                    </tr>
+                    {% for column in hasil %}
+                    <tr>
+                        <td>{{column.0}}</td>
+                        <td>{{column.1}}</td>
+                        <td style="text-align: center;">{{column.3}}</td>
+                        <td style="text-align: center;">{{column.4}}</td>
+                        <td style="text-align: center;">{{column.5}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="cont-1">
+        <p>Do another search?</p>
+        <form action="/cari_buku/<judul>/<author>" method="post">
+            <div class="input">
+                <input type="text" name="judul" placeholder="Judul Buku" required>
+            <input type="text" name="author" placeholder="Nama Author" required>
+            </div>
+            <button class="submit" type="submit">Let's Search!</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+
+</html>

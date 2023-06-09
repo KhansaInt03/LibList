@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList Member{% endblock %}</title>
+    </head>
+
+    {% block content %}
+    <div class="content-new">
+        <p class="p3">LibList Member</p>
+        <hr>
+        <div class="newdata2">
+            <div class="values">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>ID Anggota</th>
+                            <th>Nama Anggota</th>
+                            <th>Alamat Rumah</th>
+                            <th>Nomor Hp</th>
+                        </tr>
+                        {% for column in hasil %}
+                        <tr>
+                            <td>{{column.0}}</td>
+                            <td>{{column.1}}</td>
+                            <td>{{column.2}}</td>
+                            <td>{{column.3}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <p class="p3">Search a member?</p>
+        <hr>
+        <div class="newdata">
+            <form action="/anggota/cari_anggota" method="post">
+                <div class="inputbuku">
+                    <label for="nama_anggota">Nama Anggota</label>
+                    <input type="text" name="nama_anggota" placeholder="Nama" required>
+                </div>
+                <button class="submit">Search</button>
+            </form>
+        </div>
+        <hr>
+        <div class="newdata">
+            <p class="p3">New Member</p>
+            <hr>
+            <form action="/anggota/tambah_anggota" method="post">
+                <div class="inputbuku">
+                    <label for="nama_anggota">Nama Anggota</label>
+                    <input type="text" name="nama_anggota" placeholder="Nama" required>
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" placeholder="Alamat" required>
+                    <label for="hp">Nomor Handphone</label>
+                    <input type="text" name="hp" placeholder="Nomor Handphone" required>
+                    <label for="id_anggota">ID Anggota</label>
+                    <input type="text" name="id_anggota" placeholder="ID Anggota" required>
+                </div>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+
+</html>

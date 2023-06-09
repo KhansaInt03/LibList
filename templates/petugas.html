@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList Member{% endblock %}</title>
+    </head>
+
+    {% block content %}
+    <div class="content-new">
+        <p class="p3">Staff LibList</p>
+        <hr>
+        <div class="newdata2">
+                <table>
+                    <tbody><tr>
+                        <th>ID Staff</th>
+                        <th>Nama Staff</th>
+                        <th>Alamat Rumah</th>
+                        <th>Nomor Hp</th>
+                    </tr>
+                    {% for column in hasil %}
+                    <tr>
+                        <td>{{column.0}}</td>
+                        <td>{{column.1}}</td>
+                        <td>{{column.2}}</td>
+                        <td>{{column.3}}</td>
+                    </tr>
+                    {% endfor %}</tbody>
+                </table>
+        </div>
+        <div class="newdata">
+            <hr>
+            <p class="p3">New Staff</p>
+            <hr>
+            <form action="/petugas/tambah_petugas" method="post">
+                <div class="inputbuku">
+                    <label for="nama_staff">Nama Staff</label>
+                    <input type="text" name="nama_staff" placeholder="Nama" required>
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" placeholder="Alamat" required>
+                    <label for="hp">Nomor Handphone</label>
+                    <input type="text" name="hp" placeholder="Nomor Handphone" required>
+                    <label for="id_staff">ID Staff</label>
+                    <input type="text" name="id_staff" placeholder="ID Staff" required>
+                </div>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+
+</html>

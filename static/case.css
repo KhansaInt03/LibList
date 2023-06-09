@@ -1,0 +1,274 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigator {
+    font-family: Helvetica;
+    background-color:#C26DBC;
+    height: 80px;
+    display: block;
+}
+
+.navigator img{
+    width: 50px;
+    height: 50px;
+    padding-right: 30px;
+    float: left;
+    margin-left: 80px;
+    padding-top: 15px;
+}
+
+.navigator .nav-tittle{
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navigator .nav-page{
+    font-weight: bold;
+    font-size: 16px;
+    float : right;
+    margin-right: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+a{
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #C8F4F9;
+}
+
+.content{
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    font-family: Arial;
+}
+
+.content img{
+    height: 200px;
+    width: 220px;
+    float: right;
+    padding: 20px;
+}
+
+.content .p1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.content .p2 {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+
+.content .p3{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+
+.content .p4{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.cont-1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEB5EB;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.cont-1 p{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+form{
+    width: 900px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto ;
+    margin-right: auto;
+}
+
+form .input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+form .input input{
+    width: 300px;
+    height: 30px;
+    border: #C26DBC;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+button{
+    margin-top: 40px;
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: 3px;
+    border-radius: 3px;
+    background-color: #C26DBC;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: #b389b1;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #C26DBC;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.content-new .p3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    font-family: Arial;
+    padding: 0px ;
+}
+
+.content-new .newdata{
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    font-family: Arial;
+}
+
+hr{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newdata form .inputbuku{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.newdata form .inputbuku{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newdata form .inputbuku label{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.newdata form .inputbuku input{
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 400px;
+    height: 30px;
+    padding-left: 15px;
+}
+
+.newdata2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: fit-content;
+    display: block;
+    margin-bottom: 30px;
+}
+
+table, th, td{  
+    border-color: #C26DBC;
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 3px;
+}
+
+th{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td{
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.newdata2 table, tbody, .valuesbuku{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.newdata2 table, tbody, .values{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.content .values{
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 300px;
+}
+
+.content .values1 .tabel .tabelhasilcari{
+    height: fit-content !important;
+    overflow-y: hidden !important;
+}
+
+.content .values1 .tabel{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newdata2 .content .values1 .tabel{
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: fit-content !important;
+}

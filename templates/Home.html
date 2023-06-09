@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList Home Page{% endblock %}</title>
+    </head>
+
+
+        {% block content %}
+        <div class="content">
+            <img src="https://cdn-icons-png.flaticon.com/512/2702/2702069.png" alt="">
+            <p class="p1">Welcome to LibList!!!</p>
+            <p class="p2">You can borrow book easier with me!! Have fun reading!!!</p>
+        </div>
+        <div class="cont-1">
+            <p>Let's search your book!!! <br> You can input tittle and/or author of the book, then click search!</p>
+            <form action="/cari_buku/<judul>/<author>" method="post">
+                <div class="input">
+                    <input type="text" name="judul" placeholder="Judul Buku" required>
+                    <input type="text" name="author" placeholder="Nama Author">
+                </div>
+                <button class="submit" type="submit">Let's Search!</button>
+            </form>
+        </div>
+        {% endblock %}
+    </body>
+
+
+</html>

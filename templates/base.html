@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %} {% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='case.css')}}">
+    </head>
+
+    <body>
+        <div class="navigator">
+            <img src="https://cdn-icons-png.flaticon.com/512/2641/2641310.png" alt="">
+            <div class="nav-tittle">LibList</div>
+            <div class="nav-page">
+                <a href="/">Home Page</a>
+                <a href="/buku_baru">Buku Baru</a>
+                <a href="/pinjam">Pinjam</a>
+                <a href="/kembali">Kembali</a>
+                <a href="/anggota">Anggota</a>
+                <a href="/petugas">Petugas</a>
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+
+    <footer>
+        <p style="color:aliceblue; font-weight:600; font-size: larger;">LibList</p><br>
+        20.83.0568  |   20.83.0551  |   20.83.0547 <br>
+        If there is an error(s) you can contact us with email@gmail.com
+    </footer>
+
+</html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList Borrow{% endblock %}</title>
+    </head>
+
+
+    {% block content %}
+    <div class="content-new">
+        <p class="p3">Borrowing a book(s)?</p>
+        <hr>
+        <div class="newdata">
+            <form action="/pinjam/" method="post">
+                <div class="inputbuku">
+                    <label for="id_anggota">ID Anggota</label>
+                    <input type="text" name="id_anggota" placeholder="ID Anggota" required>
+                    <label for="id_petugas">ID Petugas</label>
+                    <input type="text" name="id_petugas" placeholder="ID Petugas" required>
+                    <label for="kodebuku">Kode Buku 1</label>
+                    <input type="text" name="kodebuku" placeholder="Kode Buku" required>
+                    <label for="kodebuku2">Kode Buku 2</label>
+                    <input type="text" name="kodebuku2" placeholder="Kode Buku">
+                    <label for="kodebuku3">Kode Buku 3</label>
+                    <input type="text" name="kodebuku3" placeholder="Kode Buku">
+                    <label for="tanggal_pinjam">Tanggal Pinjam</label>
+                    <input type="date" name="tanggal_pinjam" required>
+                </div>
+                <button class="submit" type="submit">Borrow</button>
+            </form>
+        </div>
+        <hr>
+        <a href="/pinjam/datapinjam"><button style="font-size:30px; width:300px">Data Pinjam</button></a>
+    </div>
+    {% endblock %}
+</body>
+
+
+</html>

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block judul %}LibList New Book{% endblock %}</title>
+    </head>
+
+
+    {% block content %}
+    <div class="content-new">
+        <p class="p3">LibList's Books</p>
+        <hr>
+        <div class="newdata2">
+            <div class="valuesbuku">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>ID Buku</th>
+                            <th>Judul Buku</th>
+                            <th>Rak Buku</th>
+                            <th>Stok Buku</th>
+                            <th>Tersedia</th>
+                        </tr>
+                        {% for column in hasil %}
+                        <tr>
+                            <td>{{column.0}}</td>
+                            <td>{{column.1}}</td>
+                            <td style="text-align: center;">{{column.3}}</td>
+                            <td style="text-align: center;">{{column.4}}</td>
+                            <td style="text-align: center;">{{column.5}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <p class="p3">Have a new book? Let's record it!</p>
+        <hr>
+        <div class="newdata">
+            <form action="/buku_baru/tambah_buku" method="post">
+                <div class="inputbuku">
+                    <label for="kodebuku">Kode Buku</label>
+                    <input type="text" name="kodebuku" placeholder="Kode Buku" required>
+                    <label for="judul">Judul Buku</label>
+                    <input type="text" name="judul" placeholder="Judul Buku" required>
+                    <label for="author">Author</label>
+                    <input type="text" name="author" placeholder="Nama Author" required>
+                    <label for="genre">Genre Buku</label>
+                    <input type="text" name="genre" placeholder="Genre Buku" required>
+                    <label for="stok">Stok Buku</label>
+                    <input type="number" name="stok" placeholder="Stok Buku" required>
+                    <button class="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+
+
+</html>
